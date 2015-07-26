@@ -18,6 +18,8 @@ module Heaven
                    Redis.new(:url => ENV["OPENREDIS_URL"])
                  elsif ENV["BOXEN_REDIS_URL"]
                    Redis.new(:url => ENV["BOXEN_REDIS_URL"])
+                 elsif ENV["REDIS_1_PORT"]
+                   Redis.new(:url => ENV["REDIS_1_PORT"])
                  else
                    Redis.new
                  end
